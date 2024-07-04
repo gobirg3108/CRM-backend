@@ -76,18 +76,11 @@ This is the backend API for the CRM application. It provides user authentication
 
 ### Customer Management
 
-- **Get All Customers**
-  - **URL**: `/api/customers`
-  - **Method**: `GET`
-  - **Headers**:
-    - `Authorization: Bearer <token>`
-  - **Response**: `200 OK` with customer data
-
 - **Add a Customer**
-  - **URL**: `/api/customers`
-  - **Method**: `POST`
-  - **Headers**:
-    - `Authorization: Bearer <token>`
+- **URL**: `/api/customers`
+- **Method**: `POST`
+- **Headers**:
+- `Authorization: Bearer <token>`
   - **Body**:
     ```json
     {
@@ -99,6 +92,13 @@ This is the backend API for the CRM application. It provides user authentication
     }
     ```
   - **Response**: `201 Created`
+ 
+  - - **Get All Customers**
+  - **URL**: `/api/customers`
+  - **Method**: `GET`
+  - **Headers**:
+    - `Authorization: Bearer <token>`
+  - **Response**: `200 OK` with customer data
 
 - **Get a Single Customer**
   - **URL**: `/api/customers/:id`
@@ -129,6 +129,35 @@ This is the backend API for the CRM application. It provides user authentication
   - **Headers**:
     - `Authorization: Bearer <token>`
   - **Response**: `204 No Content`
+ 
+    -**
+
+    ** Follow up a Customer
+    **URL**:'/api/followup/send'
+    **Method**: "POST"
+    **Headers**:
+    - `Authorization: Bearer <token>`
+    - **Response**: msg": "Email sent",
+
+      Customers Reports
+       **URL**:'/api/reports'
+       **Method**: "GET"
+      - **Headers**:
+    - `Authorization: Bearer <token>`
+    -  **Response**:"Show Our Reports",
+
+      Specific Customer followup
+     **URL**:'/api/customers/<Customer ID>/followup'
+    **Method**: "POST"
+       **Headers**:
+    - `Authorization: Bearer <token>`
+    -  **Response**: "followupActions":
+    -  [
+    -  {
+    -  "action":"show action report"
+    -  }
+    -  ]
+    
 
 ## Environment Variables
 
