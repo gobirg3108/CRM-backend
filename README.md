@@ -113,8 +113,6 @@ This is the backend API for the CRM application. It provides user authentication
   - **Headers**:
     - `Authorization: Bearer <token>`
   - **Body**:
-    ```json
-    
     Which item change enter
     ex: {
     "phone":"45623879"
